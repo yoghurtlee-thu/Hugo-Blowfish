@@ -25,6 +25,7 @@ title = "园子里的日光"
 #     { apple = "https://www.apple.com" },
         { bilibili = "https://space.bilibili.com/1354054183" },
 #     { bluesky = "https://bsky.app/profile/username" },
+    { codeberg = "https://codeberg.org/chlorine3545" },
 #     { codepen = "https://codepen.io/username" },
 #     { dev = "https://dev.to/username" },
 #     { discord = "https://discord.gg/invitecode" },

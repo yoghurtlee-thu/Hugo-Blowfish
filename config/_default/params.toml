@@ -77,7 +77,7 @@ disableTextInHeader = false
     sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
     showZenMode = false
     showComments = true
-
+    showMath = false
 [list]
     showHero = false
     # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground

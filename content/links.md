@@ -1,10 +1,8 @@
 ---
 title: 我的小伙伴们
 date: 2023-12-05 12:00:00
-draft: 
-toc: 
-feature: 
-isTop: false
+draft: false
+showComments: false
 hide: true
 ---
 这里是我的朋友们。

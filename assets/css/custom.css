@@ -1,7 +1,6 @@
-@import "/fonts/LXGW/result.css";
-
 html {
-    font-family: "LXGW WenKai Lite";
+    font-family: "LXGW WenKai";
+    font-size: 18px;
 }
 
 .friend-link-container {
@@ -47,4 +46,10 @@ html {
     font-size: 16px;
     color: #666;
     word-wrap: break-word;
+}
+
+.tk-comment {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
 }

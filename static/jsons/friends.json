@@ -5,7 +5,7 @@
             "note": "我自己",
             "url": "https://yoghurtlee.com",
             "md5": "2a71a8a21e5cd811c4590cf86874b621",
-            "des": "我行四方，以日以年。",
+            "des": "当世界年轻时",
             "ava": "/avatars/me.webp"
         },
         {
@@ -23,6 +23,14 @@
             "md5": "704dbe44b9de4401c0d2ae8a9d372323",
             "des": "尘劫有尽，我愿无穷。",
             "ava": ""
+        },
+        {
+            "name": "没有楼的楼长",
+            "note": "楼长",
+            "url": "https://blog.sdnie.fun/?",
+            "md5": "",
+            "des": "事已至此，木已成舟。",
+            "ava": "/avatars/louzhang.webp"
         }
     ]
 }

@@ -1,10 +1,13 @@
 {{ $friends := getJSON "static/jsons/friends.json" }}
 <div class="friend-link-container">
     {{ range $friends.friend}}
-    <div class="friend-link">
-        <img src="{{ with .ava }}{{ if ne . "" }}{{ . }}{{ else }}https://cravatar.cn/avatar/{{ .md5 }}{{ end }}{{ else }}https://cravatar.cn/avatar/{{ .md5 }}{{ end }}" alt="{{ .name }}" class="friend-link-avatar">
+    <div class="friend-link" style="background-image: url('{{ .avatar }}');">
+        <a href="{{ .url }}" target="_blank">
+            <img src="{{ with .ava }}{{ if ne . "" }}{{ . }}{{ else }}https://cravatar.cn/avatar/{{ .md5 }}{{ end }}{{ else }}https://cravatar.cn/avatar/{{ .md5 }}{{ end }}"
+                alt="{{ .name }}" class="friend-link-avatar">
+        </a>
         <div class="friend-link-content">
-            <h3>{{ .note }}（{{ .name }}）</h3>
+            <h3><a href="{{ .url }}" target="_blank">{{ .note }}（{{ .name }}）</a></h3>
             <p>{{ .des }}</p>
         </div>
     </div>

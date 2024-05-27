@@ -1,0 +1,28 @@
+{
+    "friend": [
+        {
+            "name": "Chlorine",
+            "note": "我自己",
+            "url": "https://yoghurtlee.com",
+            "md5": "2a71a8a21e5cd811c4590cf86874b621",
+            "des": "我行四方，以日以年。",
+            "ava": "/avatars/me.webp"
+        },
+        {
+            "name": "ClF3的博客",
+            "note": "孙哥",
+            "url": "https://clf3.org",
+            "md5": "",
+            "des": "EE学牲/锦依卫",
+            "ava": "/avatars/clf3.webp"
+        },
+        {
+            "name": "嗣檙",
+            "note": "cheng",
+            "url": "https://sicheng.taoooist.org",
+            "md5": "704dbe44b9de4401c0d2ae8a9d372323",
+            "des": "尘劫有尽，我愿无穷。",
+            "ava": ""
+        }
+    ]
+}

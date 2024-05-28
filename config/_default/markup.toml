@@ -17,11 +17,5 @@
             unsafe = true
         [markup.goldmark.extensions.passthrough]
             enable = true
-            delimiters.block = [
-                ["\\[", "\\]"],
-                ["$$", "$$"]
-            ]
-            delimiters.inline = [
-                ["\\(", "\\)"],
-                ["$", "$"]
-            ]
+            delimiters.block = [["\\[", "\\]"], ["$$", "$$"]]
+            delimiters.inline = [["\\(", "\\)"], ["$", "$"]]

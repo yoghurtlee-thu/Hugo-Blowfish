@@ -1,3 +1,29 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+
+# -- Markup --
+# These settings are required for the theme to function.
+
+theme = 'blowfish'
+
+hasCJKLanguage = true
+
+[markup]
+    [markup.asciidocExt]
+        preserveTOC = true
+    [markup.highlight]
+        # 代码块显示风格、行号显示
+        style = "github"
+        lineNos = false
+    [markup.tableOfContents]
+        endLevel = 5
+        ordered = false
+        startLevel = 2
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+        [markup.goldmark.extensions.passthrough]
+            enable = true
+            delimiters.block = [["\\[", "\\]"], ["$$", "$$"]]
+            delimiters.inline = [["\\(", "\\)"], ["$", "$"]]

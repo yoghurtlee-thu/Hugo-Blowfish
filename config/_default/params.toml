@@ -19,7 +19,7 @@ disableImageOptimization = false
 disableTextInHeader = false
 
 # defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
-# defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
+defaultFeaturedImage = "img/background.webp" # used as default for featured images in all articles
 
 # highlightCurrentMenuArea = true
 # smartTOC = true
@@ -36,8 +36,8 @@ disableTextInHeader = false
     showScrollToTop = true
 
 [homepage]
-    layout = "profile" # valid options: page, profile, hero, card, background, custom
-    #homepageImage = "IMAGE.jpg" # used in: hero, and card
+    layout = "background" # valid options: page, profile, hero, card, background, custom
+    homepageImage = "img/background.webp" # used in: hero, and card
     showRecent = true
     showRecentItems = 6
     showMoreLink = true

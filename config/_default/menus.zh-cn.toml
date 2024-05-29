@@ -28,7 +28,7 @@
 [[main]]
     name = "分类"
     parent = "归档"
-    pageRef = "categories"
+    pageRef = "category"
     weight = 20
 
 [[main]]

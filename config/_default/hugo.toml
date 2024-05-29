@@ -14,7 +14,7 @@ paginate = 10
 summaryLength = 0
 
 buildDrafts = false
-buildFuture = false
+buildFuture = true
 
 # googleAnalytics = "G-XXXXXXXXX"
 
@@ -23,7 +23,7 @@ buildFuture = false
 
 [taxonomies]
     tag = "tags"
-    category = "categories"
+    category = "category"
     author = "authors"
     series = "series"
 
@@ -44,7 +44,7 @@ buildFuture = false
         weight = 100
 
     [[related.indices]]
-        name = "categories"
+        name = "category"
         weight = 100
 
     [[related.indices]]

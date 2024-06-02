@@ -57,8 +57,25 @@ html {
     word-wrap: break-word;
 }
 
+/* Twikoo 样式修改 */
+
 .tk-comment {
     font-size: 0.9rem;
     line-height: 1.5;
     margin-top: 0.5rem;
+}
+
+#twikoo .tk-comment .tk-replies .tk-comment {
+    box-shadow: none;
+}
+.tk-replies {
+    margin-left: -85px;
+}
+
+.el-textarea__inner {
+    height: 130px !important;
+    background-image: url("../img/comment_bgi.gif") !important;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

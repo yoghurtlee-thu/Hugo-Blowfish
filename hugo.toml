@@ -10,6 +10,9 @@ theme = 'blowfish'
 hasCJKLanguage = true
 enableCsrf = true
 
+[permalinks] 
+    posts = "/:slug/" # posts = "/posts/:slug/" 这是改之前
+
 [markup]
     [markup.asciidocExt]
         preserveTOC = true

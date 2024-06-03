@@ -6,12 +6,12 @@
 
 [build.environment]
     NODE_ENV = "production"
-    GO_VERSION = "1.16"
+    GO_VERSION = "1.22.0"
     TZ = "Asia/Shanghai"  # Set to preferred timezone
 
 [context.production.environment]
-    HUGO_VERSION = "0.126.1"
+    HUGO_VERSION = "0.126.3"
     HUGO_ENV = "production"
 
 [context.deploy-preview.environment]
-    HUGO_VERSION = "0.126.1"
+    HUGO_VERSION = "0.126.3"

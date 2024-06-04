@@ -11,15 +11,19 @@ hasCJKLanguage = true
 enableCsrf = true
 
 [permalinks] 
-    posts = "/:slug/" # posts = "/posts/:slug/" 这是改之前
+    posts = "/:slug/"
 
 [markup]
     [markup.asciidocExt]
         preserveTOC = true
     [markup.highlight]
-        # 代码块显示风格、行号显示
-        style = "github"
+        codeFences = true
+        guessSyntax = false
         lineNos = false
+        lineNumbersInTable = true
+        noClasses = true
+        style = "github"
+        tabWidth = 4
     [markup.tableOfContents]
         endLevel = 5
         ordered = false

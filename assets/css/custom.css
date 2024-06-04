@@ -1,5 +1,5 @@
 html {
-    font-family: "Fira Code", "LXGW WenKai Lite";
+    font-family: "Fira Code Light", "LXGW WenKai Lite";
     font-size: 18px;
 }
 
@@ -78,4 +78,13 @@ code {
 
 .el-textarea__inner {
     height: 200px !important;
+}
+
+.candy {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f00; /* 糖果颜色 */
+  border-radius: 50%;
+  pointer-events: none; /* 阻止糖果元素阻止鼠标事件 */
 }

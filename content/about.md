@@ -30,7 +30,7 @@ showComments: false
 ### 🪁 个人爱好
 
 - 📖 读书 （尤其是闲书）
-- ✒️ 写作 （包括但不限于随笔，日记，小说）
+- ✒️ 写作 包括但不限于随笔，日记，小说）
 - 💻 折腾 （但是不太会）
 - 🍲 美食 （但不会做）
 - 🚶‍♂️ 散步 （少数能进行的运动之一）
@@ -46,7 +46,6 @@ showComments: false
 - {{< icon "email" >}} Email：[这里](mailto:yoghurtlee123@gmail.com)（学术合作请点击[这里](mailto:li-yao23@mails.tsinghua.edu.cn)）（~~真的会有人找我这个学术垃圾合作吗~~）
 - {{< icon "github" >}} GitHub：[yoghurtlee-thu](https://github.com/yoghurtlee-thu)
 - {{< icon "gitee" >}} Gitee：[yoghurtlee-thu](https://gitee.com/yoghurtlee-thu)
-- {{< icon "gitlab" >}} GitLab：[yoghurtlee-thu](https://gitlab.com/yoghurtlee-thu)（更新不活跃）
 - {{< icon "codeberg" >}} Codeberg：[chlorine3545](https://codeberg.org/chlorine3545)
 - {{< icon "bilibili" >}} Bilibili：[尧Yoghurt](https://space.bilibili.com/1354054183)
 

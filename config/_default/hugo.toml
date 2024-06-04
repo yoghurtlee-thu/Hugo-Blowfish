@@ -34,7 +34,18 @@ buildFuture = true
     priority = 0.5
 
 [outputs]
-    home = ["HTML", "RSS", "JSON"]
+    home = ["HTML", "RSS", "JSON", "Algolia"]
+
+[outputFormats.Algolia]
+    baseName = "algolia"
+    isPlainText = true
+    mediaType = "application/json"
+    notAlternative = true
+
+[params.algolia]
+    appId = "H2ZXYNUCD7" # 是id
+    indexName = "Hugo"
+    searchOnlyKey = "0b49a5b61cc6c05ad9619ce2bfcb0f01"
 
 [related]
   threshold = 0

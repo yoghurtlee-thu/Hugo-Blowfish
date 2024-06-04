@@ -1,6 +1,10 @@
 html {
-    font-family: "LXGW WenKai";
+    font-family: "Fira Code", "LXGW WenKai Lite";
     font-size: 18px;
+}
+
+code {
+    font-family: "Fira Code", monospace;
 }
 
 .friend-link-container {
@@ -73,9 +77,5 @@ html {
 }
 
 .el-textarea__inner {
-    height: 130px !important;
-    background-image: url("../img/comment_bgi.gif") !important;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 200px !important;
 }

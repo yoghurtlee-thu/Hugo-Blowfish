@@ -1,14 +1,14 @@
 {{/*  运行时间  */}}
 <script type="text/javascript">
     function runtime() {
-        var X = new Date("12/15/2023 12:00:00");
-        var Y = new Date();
-        var T = Y.getTime() - X.getTime();
-        var totalSeconds = Math.floor(T / 1000);
-        var D = Math.floor(totalSeconds / 86400);
-        var H = Math.floor((totalSeconds % 86400) / 3600);
-        var M = Math.floor((totalSeconds % 3600) / 60);
-        var S = totalSeconds % 60;
+        let X = new Date("12/15/2023 12:00:00");
+        let Y = new Date();
+        let T = Y.getTime() - X.getTime();
+        let totalSeconds = Math.floor(T / 1000);
+        let D = Math.floor(totalSeconds / 86400);
+        let H = Math.floor((totalSeconds % 86400) / 3600);
+        let M = Math.floor((totalSeconds % 3600) / 60);
+        let S = totalSeconds % 60;
         document.getElementById("span").innerHTML = "本站已运行: " + D + "天" + H + "小时" + M + "分" + S + "秒";
     }
     setInterval(runtime, 1000);

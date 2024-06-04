@@ -1,3 +1,20 @@
+{{/*  运行时间  */}}
+<script type="text/javascript">
+    function runtime() {
+        var X = new Date("12/15/2023 12:00:00");
+        var Y = new Date();
+        var T = Y.getTime() - X.getTime();
+        var totalSeconds = Math.floor(T / 1000);
+        var D = Math.floor(totalSeconds / 86400);
+        var H = Math.floor((totalSeconds % 86400) / 3600);
+        var M = Math.floor((totalSeconds % 3600) / 60);
+        var S = totalSeconds % 60;
+        document.getElementById("span").innerHTML = "本站已运行: " + D + "天" + H + "小时" + M + "分" + S + "秒";
+    }
+    setInterval(runtime, 1000);
+</script>
+
+{{/*  Wowbook  */}}
 {{ $totalWord := 0 }}
 {{ range .Site.RegularPages }}
 {{ $totalWord = add $totalWord .WordCount }}
@@ -39,28 +56,10 @@
 
 
 <p class="text-xs text-neutral-500 dark:text-neutral-400" style="text-align: center">
-        <span id="span"></span> | <span>共 {{$totalWord }} 字 <br /> {{$wowBook | safeHTML }}</span>
-        <br>
+    <span id="span"></span> | <span>共 {{$totalWord }} 字 <br /> {{$wowBook | safeHTML }}</span>
+    <br>
     <a href="https://icp.gov.moe/?keyword=20240711" target="_blank">萌ICP备20240711号</a>
 </p>
 
-<script type="text/javascript">
-    function runtime() {
-        X = new Date("12/15/2023 12:00:00");
-        Y = new Date();
-        T = (Y.getTime() - X.getTime());
-        M = 24 * 60 * 60 * 1000;
-        a = T / M;
-        A = Math.floor(a);
-        b = (a - A) * 24;
-        B = Math.floor(b);
-        c = (b - B) * 60;
-        C = Math.floor((b - B) * 60);
-        D = Math.floor((c - C) * 60);
-        //信息写入到DIV中
-        span.innerHTML = "本站已运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
-    }
-    setInterval(runtime, 1000);
-</script>
-
+{{/*  糖果雨特效  */}}
 <script src="https://cdn.chlorinechan.top/customjs/candy.js"></script>

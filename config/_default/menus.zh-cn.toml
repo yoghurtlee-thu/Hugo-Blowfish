@@ -50,7 +50,7 @@
 [[main]]
     name = "关于"
     pageRef = "about"
-    weight = 50
+    weight = 60
 
 
 # -- Footer Menu --

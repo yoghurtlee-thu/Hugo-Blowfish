@@ -19,9 +19,10 @@ code {
     border-radius: 10px;
     margin-bottom: 20px;
     display: flex;
-    align-items: center; /* 添加这一行来使头像垂直居中 */
+    align-items: center;
+    /* 添加这一行来使头像垂直居中 */
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: auto;
     max-height: 150px;
     background-size: cover;
@@ -72,6 +73,7 @@ code {
 #twikoo .tk-comment .tk-replies .tk-comment {
     box-shadow: none;
 }
+
 .tk-replies {
     margin-left: -85px;
 }
@@ -81,10 +83,12 @@ code {
 }
 
 .candy {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #f00; /* 糖果颜色 */
-  border-radius: 50%;
-  pointer-events: none; /* 阻止糖果元素阻止鼠标事件 */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    /* 糖果颜色 */
+    border-radius: 50%;
+    pointer-events: none;
+    /* 阻止糖果元素阻止鼠标事件 */
 }

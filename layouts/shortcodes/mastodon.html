@@ -1,0 +1,50 @@
+<div id="toots"></div>
+<button id="toots-moreButton" onclick="tootsShowMore()">更多</button>
+
+<script>
+    let maxId = null; // 初始值为 null，表示第一页
+    const tootsDiv = document.getElementById('toots');
+    const tootsMoreButton = document.getElementById('toots-moreButton');
+
+    // 获取 Mastodon 用户公开Toots
+    async function getPublicToots() {
+        const queryParams = maxId ? ("?limit={{ .Get 2 | default 5 }}&max_id=" + maxId) : "?limit={{ .Get 2 | default 5 }}";
+        const response = await fetch("{{ .Get 0 }}/api/v1/accounts/{{ .Get 1 }}/statuses" + queryParams, {
+            headers: {
+                'Authorization': 'Bearer ' + 'ZJE2YWE4NTKTM2I1ZC0ZN2I2LWE4NGITNWIYZJLJNMRMODE5'
+            }
+        });
+        const toots = await response.json();
+        return toots;
+    }
+
+    // 将Toots显示在页面上
+    async function displayToots() {
+        try {
+            const toots = await getPublicToots();
+            if (toots && toots.length > 0) {
+                toots.forEach(toot => {
+                    const tootDiv = document.createElement('div');
+                    tootDiv.innerHTML = `<p>${toot.content}</p><hr>`;
+                    tootsDiv.appendChild(tootDiv);
+                    maxId = toot.id; // 更新最大 ID
+                });
+                tootsMoreButton.style.display = 'block';
+            } else {
+                tootsMoreButton.style.display = 'none';
+            }
+        } catch (error) {
+            console.error('获取Toots时出错：', error);
+            tootsMoreButton.style.display = 'none';
+        }
+    }
+
+    function tootsShowMore() {
+        displayToots();
+    }
+
+    displayToots();
+
+    // 页面加载时调用显示Toots函数
+    // window.onload = displayToots;
+</script>

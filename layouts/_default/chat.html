@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ .Scratch.Set "scope" "single" }}
+
+<link rel="stylesheet"
+    href="https://cdn.chlorinechan.top/mastodon%2Fmastodon-timeline.min.css">
+
+    <br>
+<h2 class="mt-0 text-4xl font-bold text-neutral-900 dark:text-neutral">
+    {{ .Title | emojify }}
+</h1>
+
+<br>
+
+<article>
+    <div id="mt-container" class="mt-container">
+        <div class="mt-body" role="feed">
+            <div class="mt-loading-spinner"></div>
+        </div>
+    </div>
+    <script src="https://cdn.chlorinechan.top/mastodon/mastodon-timeline.umd.js"></script>
+    <script>
+        const myTimeline = new MastodonTimeline.Init({
+            instanceUrl: "https://mastodon.social",
+            timelineType: "profile",
+            userId: "112558718158979587",
+            profileName: "@yoghurtlee",
+            defaultTheme: "auto",
+        });
+    </script>
+</article>
+
+{{ end }}

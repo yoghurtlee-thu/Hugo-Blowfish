@@ -3,7 +3,8 @@
         background-image: url('https://cdn.ftls.xyz/images/2023/06/20230820123739.png');
         background-size: cover;
         background-position: center;
-        height: 200px;
+        height: 300px;
+        width: 100%;
         position: relative;
         margin-bottom: 70px;
         border-radius: 5px;
@@ -11,13 +12,51 @@
         overflow: hidden;
     }
 
+    .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #000000);
+        z-index: 1;
+    }
 
-    
-    .avatar {
+    .basic-info {
+        position: relative;
+        z-index: 2;
+        /* 确保信息层在渐变层之上 */
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        /* 根据需要调整内边距 */
+        /* 根据需要调整阴影 */
+    }
+
+    .basic-avatar {
+        flex: auto;
+        margin-right: 20px;
         width: 100px;
-        height: 120px;
-        border-radius: 15%;
-        box-shadow: 0 0 3px 0.5px rgb(146, 255, 146);
+        height: 150px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    .basic-avatar img {
+        margin-left: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin-top: 120px;
+    }
+
+    .basic-text {
+        flex: 1 1 auto;
+        /* 让文本占据剩余空间 */
+        text-align: left;
+        /* 文本左对齐 */
     }
 
     .toots-container {
@@ -41,17 +80,6 @@
         margin-bottom: 10px;
     }
 
-
-
-    .basic-info {
-        position: absolute;
-        /* Use absolute positioning */
-        bottom: -70px;
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
-    }
-
     .toot-stats {
         display: flex;
         justify-content: flex-end;
@@ -66,10 +94,6 @@
         border: 1px solid #2d97bd86;
         border-radius: 30px;
         background-color: rgba(255, 255, 255, 0.05);
-    }
-
-    .basic-text {
-        margin-top: 200px;
     }
 
     .basic-avatar img {
@@ -125,79 +149,82 @@
             margin-left: 2px;
 
         }
+    }
 
-        /* 430px or 200px hide img and ears */
-        @media only screen and (max-width: 430px) {
+    /* 430px or 200px hide img and ears */
+    @media only screen and (max-width: 430px) {
 
-            .basic-avatar::before,
-            .basic-avatar::after {
-                display: none;
-            }
-
-            .basic-text {
-                margin-top: 100px;
-                margin-left: -25px;
-            }
-
-            .basic-avatar img {
-                margin-right: 10px;
-                display: none;
-            }
+        .basic-avatar::before,
+        .basic-avatar::after {
+            display: none;
         }
 
-        .mdi--reply {
-            display: inline-block;
-            width: 1.3em;
-            height: 1.3em;
-            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M10 9V5l-7 7l7 7v-4.1c5 0 8.5 1.6 11 5.1c-1-5-4-10-11-11'/%3E%3C/svg%3E");
-            background-color: currentColor;
-            -webkit-mask-image: var(--svg);
-            mask-image: var(--svg);
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            -webkit-mask-size: 100% 100%;
-            mask-size: 100% 100%;
+        .basic-text {
+            margin-top: 100px;
+            margin-left: -25px;
         }
 
-        .mdi--star {
-            display: inline-block;
-            width: 1.3em;
-            height: 1.3em;
-            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z'/%3E%3C/svg%3E");
-            background-color: currentColor;
-            -webkit-mask-image: var(--svg);
-            mask-image: var(--svg);
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            -webkit-mask-size: 100% 100%;
-            mask-size: 100% 100%;
+        .basic-avatar img {
+            margin-right: 10px;
+            display: none;
         }
+    }
 
-        .mdi--twitter-retweet {
-            display: inline-block;
-            width: 1.3em;
-            height: 1.3em;
-            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6 5.75L10.25 10H7v6h6.5l2 2H7a2 2 0 0 1-2-2v-6H1.75zm12 12.5L13.75 14H17V8h-6.5l-2-2H17a2 2 0 0 1 2 2v6h3.25z'/%3E%3C/svg%3E");
-            background-color: currentColor;
-            -webkit-mask-image: var(--svg);
-            mask-image: var(--svg);
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            -webkit-mask-size: 100% 100%;
-            mask-size: 100% 100%;
-        }
+    .mdi--reply {
+        display: inline-block;
+        width: 1.3em;
+        height: 1.3em;
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M10 9V5l-7 7l7 7v-4.1c5 0 8.5 1.6 11 5.1c-1-5-4-10-11-11'/%3E%3C/svg%3E");
+        background-color: currentColor;
+        -webkit-mask-image: var(--svg);
+        mask-image: var(--svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+
+    .mdi--star {
+        display: inline-block;
+        width: 1.3em;
+        height: 1.3em;
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z'/%3E%3C/svg%3E");
+        background-color: currentColor;
+        -webkit-mask-image: var(--svg);
+        mask-image: var(--svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+
+    .mdi--twitter-retweet {
+        display: inline-block;
+        width: 1.3em;
+        height: 1.3em;
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6 5.75L10.25 10H7v6h6.5l2 2H7a2 2 0 0 1-2-2v-6H1.75zm12 12.5L13.75 14H17V8h-6.5l-2-2H17a2 2 0 0 1 2 2v6h3.25z'/%3E%3C/svg%3E");
+        background-color: currentColor;
+        -webkit-mask-image: var(--svg);
+        mask-image: var(--svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
 </style>
 
 <body>
     <div class="header">
         <div class="basic-info">
             <div class="basic-avatar">
-                <a href="/chat/" title="Chlorine"><img src="/avatars/me.webp" alt="Chlorine" class="avatar"></a>
+                <img src="/avatars/me.webp" alt="Chlorine" class="avatar"></a>
             </div>
             <div class="basic-text">
-                <strong>&nbsp;&nbsp;Chlorine</strong> <a href="https://scg.owu.one/@yoghurtlee">@yoghurtlee</a>&nbsp;
-                <span id="basic-field-status" class="basic-field-status"></span>
-                <br>&nbsp;&nbsp;<a href="/chat/">微语</a> <span id="basic-statuses-count"></span> 条&nbsp;
+                <a href="/chat/" title="Chlorine">Chlorine</a>
+                <br>
+                <a href="https://scg.owu.one/@yoghurtlee">@yoghurtlee</a>&nbsp;
+                    <span id="basic-field-status" class="basic-field-status"></span>
+                    <br>&nbsp;&nbsp;<a href="/chat/">微语</a> <span id="basic-statuses-count"></span> 条&nbsp;
             </div>
         </div>
     </div>

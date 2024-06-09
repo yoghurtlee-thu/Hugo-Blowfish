@@ -35,12 +35,9 @@
   "homepage": "https://github.com/nunocoracao/blowfish#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
-    "chart.js": "^4.4.3",
     "fuse.js": "^7.0.0",
     "jquery": "^3.7.1",
-    "katex": "^0.16.10",
     "lite-youtube-embed": "^0.3.2",
-    "mermaid": "^10.9.1",
     "packery": "^2.1.2",
     "prettier": "^3.2.5",
     "prettier-plugin-go-template": "^0.0.15",
@@ -61,22 +58,6 @@
     {
       "from": "node_modules/chart.js/dist/chart.umd.js",
       "to": "assets/lib/chart/chart.min.js"
-    },
-    {
-      "from": "node_modules/katex/dist/katex.min.js",
-      "to": "assets/lib/katex/katex.min.js"
-    },
-    {
-      "from": "node_modules/katex/dist/katex.min.css",
-      "to": "assets/lib/katex/katex.min.css"
-    },
-    {
-      "from": "node_modules/katex/dist/contrib/auto-render.min.js",
-      "to": "assets/lib/katex/auto-render.min.js"
-    },
-    {
-      "from": "node_modules/katex/dist/fonts/",
-      "to": "assets/lib/katex/fonts/"
     },
     {
       "from": "node_modules/fuse.js/dist/fuse.min.js",

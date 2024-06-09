@@ -5,9 +5,6 @@
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  {{ with .Description | default .Site.Params.description }}
-  <meta name="description" content="{{ . }}" />
-  {{ end }}
   {{/* Title */}}
   {{ if .IsHome -}}
   <title>{{ .Site.Title | emojify }}</title>

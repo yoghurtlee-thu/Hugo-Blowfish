@@ -48,6 +48,11 @@
     weight = 40
 
 [[main]]
+    name = "说说"
+    pageRef = "chat"
+    weight = 50
+
+[[main]]
     name = "关于"
     pageRef = "about"
     weight = 60

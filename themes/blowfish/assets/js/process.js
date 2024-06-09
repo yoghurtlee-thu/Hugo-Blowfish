@@ -6,11 +6,11 @@ if (typeof auth !== 'undefined') {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
-    function toggleLoaders(node){
+    function toggleLoaders(node) {
         var classesString = node.className;
-        if(classesString == "") return
+        if (classesString == "") return
         var classes = classesString.split(" ");
-        for(var i in classes){  
+        for (var i in classes) {
             node.classList.toggle(classes[i])
         }
     }

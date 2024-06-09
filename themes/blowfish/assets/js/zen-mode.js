@@ -25,7 +25,7 @@ function _toogleZenMode(zendModeButton) {
     if (body.classList.contains('zen-mode-enable')) {
         // Persist configuration
         //localStorage.setItem('blowfish-zen-mode-enabled', 'true');
-        
+
         // Change title to enable
         zendModeButton.setAttribute('title', titleI18nEnable)
         // Auto-scroll to title article
@@ -50,7 +50,7 @@ function _registerZendModeButtonClick(zendModeButton) {
     window.addEventListener("DOMContentLoaded", (event) => {
         // Register click on 'zen-mode-button' node element
         const zendModeButton = document.getElementById('zen-mode-button');
-        if(zendModeButton !== null && zendModeButton !== undefined) {
+        if (zendModeButton !== null && zendModeButton !== undefined) {
             _registerZendModeButtonClick(zendModeButton);
         }
     });

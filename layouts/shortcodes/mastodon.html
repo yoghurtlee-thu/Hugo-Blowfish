@@ -1,64 +1,4 @@
 <style>
-    .header {
-        background-image: url('https://cdn.ftls.xyz/images/2023/06/20230820123739.png');
-        background-size: cover;
-        background-position: center;
-        height: 300px;
-        width: 100%;
-        position: relative;
-        margin-bottom: 70px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px 1px #2d96bd;
-        overflow: hidden;
-    }
-
-    .header::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #000000);
-        z-index: 1;
-    }
-
-    .basic-info {
-        position: relative;
-        z-index: 2;
-        /* 确保信息层在渐变层之上 */
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        /* 根据需要调整内边距 */
-        /* 根据需要调整阴影 */
-    }
-
-    .basic-avatar {
-        flex: auto;
-        margin-right: 20px;
-        width: 100px;
-        height: 150px;
-        border-radius: 15px;
-        overflow: hidden;
-        margin-top: 50px;
-    }
-
-    .basic-avatar img {
-        margin-left: 20px;
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-        margin-top: 120px;
-    }
-
-    .basic-text {
-        flex: 1 1 auto;
-        /* 让文本占据剩余空间 */
-        text-align: left;
-        /* 文本左对齐 */
-    }
-
     .toots-container {
         margin: 0 auto;
     }
@@ -214,23 +154,6 @@
 </style>
 
 <body>
-    <div class="header">
-        <div class="basic-info">
-            <div class="basic-avatar">
-                <img src="/avatars/me.webp" alt="Chlorine" class="avatar"></a>
-            </div>
-            <div class="basic-text">
-                <a href="/chat/" title="Chlorine">Chlorine</a>
-                <br>
-                <a href="https://scg.owu.one/@yoghurtlee">@yoghurtlee</a>&nbsp;
-                    <span id="basic-field-status" class="basic-field-status"></span>
-                    <br>&nbsp;&nbsp;<a href="/chat/">微语</a> <span id="basic-statuses-count"></span> 条&nbsp;
-            </div>
-        </div>
-    </div>
-    <div id="basic-bio"></div>
-    <div id="basic-profile"></div>
-    <hr style="margin: 1rem 1rem;">
     <div id="toots-content" class="toots-container">
         <div class="toot" id="toots">
             <!-- show toots -->
@@ -308,14 +231,7 @@
                     tootDiv.classList.add("toot");
 
                     // 评论按钮
-                    const button = document.createElement("button");
-                    // button.innerHTML = "<i class=\"far fa-comments fa-fw\"></i>"
-                    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M44 6H4v30h9v5l10-5h21zM14 19.5v3m10-3v3m10-3v3"/></svg>'
-                    button.id = toot.id;
-                    button.type = 'button';
-                    button.title = "评论"
-                    button.style = "float: right;"
-                    tootDiv.appendChild(button);
+
 
                     const tootInfoDiv = document.createElement("div");
                     tootInfoDiv.classList.add("toot-info");
@@ -361,9 +277,6 @@
 
                     // 评论锚点
                     const commentAnchor = document.createElement("div");
-                    button.onclick = function () {
-                        initArtalk(commentAnchor, toot);
-                    }
 
                     tootDiv.appendChild(tootInfoDiv);
                     tootDiv.appendChild(contentDiv);
@@ -394,16 +307,6 @@
     }
 
     function displayBioProfile(statuse) {
-        document.getElementById("basic-statuses-count").innerText = `${statuse.account.statuses_count}`;
-        document.getElementById("basic-bio").innerHTML = statuse.account.note;
-        let fieldsHtml = "";
-        statuse.account.fields.forEach(field => {
-            fieldsHtml += `<strong>${field.name}</strong> <span>${field.value}</span><br>`;
-            if (field.name === "Status") {
-                document.getElementById("basic-field-status").innerHTML = `&nbsp;${field.value}&nbsp;`;
-            }
-        });
-        document.getElementById("basic-profile").innerHTML = fieldsHtml;
     }
 
     displayToots();
